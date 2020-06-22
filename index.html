@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        
+        .show {
+            display: block;
+            color: #fff;
+        }
+
+        .mymodal {
+            display: none;
+            width: 300px;
+            height: 300px;
+            border-radius: 4px;
+            background: #3f3f3f;
+            text-align: center;
+            padding: 50px;
+            margin: 20px auto;
+            color: #fff;
+            position: relative;
+            margin-top: -10%;
+        }
+
+        .showhidemodal {
+            display: block;
+        }
+
+        .login-panel {
+            padding-top: 10px;
+        }
+
+        #close {
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            color: rgb(206, 22, 22);
+        }
+
+        #close:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        #item .item-list {
+            color: #2f2f2f;
+        }
+
+        .delete-btn {
+            color: red;
+            background: none !important;
+            border: none;
+            text-align: right;
+            position: absolute;
+            right: 5px;
+        }
+
+        .delete-btn:hover {
+            cursor: pointer;
+        }
+
+        .delete-btn:focus {
+            outline: none;
+        }
+
+        .hidecard {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <header>
+            <div id="logo">
+                <span class="mylogo"></span>
+            </div>
+            <div class="login-panel">
+                <input id="mybtn" type="button" value="Popup" />
+            </div>
+        </header>
+        <section>
+            <div class="container mt-5">
+                <form id="addForm">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="col-md-6 mb-4">
+                                <input type="text" id="item" class="form-control" placeholder="Add Item" />
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <button id="btnadd" type="submit" class="btn btn-primary">Add Item</button>
+                            </div>
+                        </div>
+                        <div id="mycard" class="col-md-6">
+                            <div class="col-md-6 mb-4">
+                                <input id="filter" type="text" class="form-control" placeholder="Search" />
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="card">
+                                    <ul id="ulitem" class="list mt-2">
+                                        <!-- <li class="item-list">Item 1</li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+        <div class="mymodal">
+            <a id="close">X</a>
+            <span>popup modal</span>
+        </div>
+    </div>
+</body>
+<script src="dom.js"></script>
+
+</html>
